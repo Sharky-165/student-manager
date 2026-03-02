@@ -72,7 +72,7 @@ http://localhost:8080/students
 # 4.1. Ràng buộc Khóa Chính (Primary Key)
 Hiện tượng: Database trả về lỗi UNIQUE constraint failed hoặc duplicate key value khi cố gắng chèn một bản ghi có id đã tồn tại trong hệ thống.
 
-Giải thích: Khóa chính (Primary Key) đóng vai trò là định danh duy nhất cho mỗi hàng trong bảng. Database bắt buộc giá trị này phải không trùng lặp và không được phép *NULL*. Việc vi phạm ràng buộc này khiến hệ thống không thể phân biệt các bản ghi, dẫn đến sai lệch dữ liệu và phá vỡ tính toàn vẹn thực thể.
+Giải thích: Khóa chính (Primary Key) là định danh của mỗi hàng trong bảng. Database bắt buộc giá trị này phải không trùng lặp và không được phép *NULL*. Việc vi phạm ràng buộc này khiến hệ thống không thể phân biệt các bản ghi, dẫn đến sai lệch dữ liệu và phá vỡ tính toàn vẹn thực thể.
 
 # 4.2. Toàn vẹn dữ liệu (Constraints)
 Thí nghiệm & Kết quả: Chèn sinh viên thiếu cột name sẽ thành công nếu cột đó cho phép *NULL*. Ngược lại, nếu có ràng buộc NOT NULL, database sẽ chặn hành động này để bảo vệ cấu trúc dữ liệu.
@@ -85,8 +85,12 @@ Hiện tượng & Nguyên nhân: Dữ liệu bị xóa sạch sau mỗi lần kh
 Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-auto=update```. Ở chế độ này, Hibernate sẽ đối chiếu schema hiện tại với các Entity trong Java để chỉ cập nhật những thay đổi về cấu trúc mà không làm mất dữ liệu hiện có.
 
 ## 5. Screenshot và mô tả các module trong Lab 4
-**Giao diện xem toàn bộ sinh viên**<img width="1912" height="966" alt="image" src="https://github.com/user-attachments/assets/d419ac67-7107-484e-92a7-4f944e6fe422" />
+**Giao diện xem toàn bộ sinh viên**<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/fd35a68b-5169-4784-a28a-07bacf55a920" />
 
+Đường dẫn (URL):
+```
+/students
+```
 - Hiển thị danh sách toàn bộ sinh viên dưới dạng bảng.
 - Mỗi sinh viên bao gồm các thông tin: ID, họ và tên, email, tuổi.
 - Tích hợp ô nhập liệu cho phép tìm kiếm sinh viên theo tên.
@@ -95,6 +99,10 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
 - Các sinh viên có tuổi nhỏ hơn 18 được hiển thị nổi bật nhằm minh họa xử lý logic hiển thị phía server.
 
 **Giao diện thêm sinh viên** <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/2d32a6fd-8bd1-41b6-afde-36e01a3d1cbc" />
+Đường dẫn (URL):
+```
+/students/0
+```
 
 - Hiển thị form nhập liệu bao gồm các trường(các giá trị mặc định được set):
   - Họ và Tên
@@ -102,7 +110,10 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
   - Tuổi
 
 **Giao diện chỉnh sửa sinh viên, xóa sinh viên** <img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/dc798ca2-bac3-4dff-b995-7de9203bead3" />
-
+Đường dẫn (URL):
+```
+/students/{id}
+```
 - Hiển thị đầy đủ thông tin chi tiết của một sinh viên:
   - ID
   - Họ và Tên
@@ -113,9 +124,11 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
   - Sau khi xóa thành công, hệ thống điều hướng về Trang Danh Sách.
  
   **Công cụ tìm kiếm**
+<img width="1916" height="964" alt="image" src="https://github.com/user-attachments/assets/28156a9e-07b8-4361-b8ef-43b83c802daf" />
+
 Đường dẫn (URL):
 ```
-GET /students?keyword={name}
+/students?keyword={name}
 ```
 *Mô tả chức năng:*
 - Cho phép người dùng tìm kiếm sinh viên theo *tên* thông qua ô nhập liệu trên Trang Danh Sách.
