@@ -41,8 +41,13 @@ public class StudentService {
     public void updateStudent(Student student) {
         System.out.println(student.getId());
         if (student.getId() == -1) {
-            student.setId(studentRepository.findAll().size() + 1);
+            int id = 1;
+            while(studentRepository.existsById(id)) {
+                id = id + 1;
+            }
+            student.setId(id);
         }
+
         studentRepository.save(student);
 
     }
