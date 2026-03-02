@@ -26,9 +26,9 @@ public class Student {
 
     public Student() {
         this.id = -1;
-        this.name = "not available";
-        this.email = "not available";
-        this.age = -1;
+        this.name = "";
+        this.email = "";
+        this.age = 0;
     }
 
     public Integer getId() {

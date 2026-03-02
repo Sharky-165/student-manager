@@ -57,4 +57,10 @@ public class StudentWebController {
         return "redirect:/students";
     }
 
+    @PostMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Integer id, Model model){
+        studentService.deleteStudent(id);
+        return "redirect:/students";
+    }
+
 }
