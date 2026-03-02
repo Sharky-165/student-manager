@@ -85,7 +85,7 @@ Hiện tượng & Nguyên nhân: Dữ liệu bị xóa sạch sau mỗi lần kh
 Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-auto=update```. Ở chế độ này, Hibernate sẽ đối chiếu schema hiện tại với các Entity trong Java để chỉ cập nhật những thay đổi về cấu trúc mà không làm mất dữ liệu hiện có.
 
 ## 5. Screenshot và mô tả các module trong Lab 4
-*Giao diện xem toàn bộ sinh viên*<img width="1912" height="966" alt="image" src="https://github.com/user-attachments/assets/d419ac67-7107-484e-92a7-4f944e6fe422" />
+**Giao diện xem toàn bộ sinh viên**<img width="1912" height="966" alt="image" src="https://github.com/user-attachments/assets/d419ac67-7107-484e-92a7-4f944e6fe422" />
 
 - Hiển thị danh sách toàn bộ sinh viên dưới dạng bảng.
 - Mỗi sinh viên bao gồm các thông tin: ID, họ và tên, email, tuổi.
@@ -94,14 +94,14 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
 - Mỗi dòng dữ liệu có liên kết nhấn vào để truy cập trang thông tin chi tiết của sinh viên tương ứng.
 - Các sinh viên có tuổi nhỏ hơn 18 được hiển thị nổi bật nhằm minh họa xử lý logic hiển thị phía server.
 
-*Giao diện thêm sinh viên* <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/2d32a6fd-8bd1-41b6-afde-36e01a3d1cbc" />
+**Giao diện thêm sinh viên** <img width="1917" height="910" alt="image" src="https://github.com/user-attachments/assets/2d32a6fd-8bd1-41b6-afde-36e01a3d1cbc" />
 
 - Hiển thị form nhập liệu bao gồm các trường(các giá trị mặc định được set):
   - Họ và Tên
   - Email
   - Tuổi
 
-*Giao diện chỉnh sửa sinh viên, xóa sinh viên* <img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/dc798ca2-bac3-4dff-b995-7de9203bead3" />
+**Giao diện chỉnh sửa sinh viên, xóa sinh viên** <img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/dc798ca2-bac3-4dff-b995-7de9203bead3" />
 
 - Hiển thị đầy đủ thông tin chi tiết của một sinh viên:
   - ID
@@ -112,7 +112,7 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
 - Cung cấp nút “Xóa” sinh viên:
   - Sau khi xóa thành công, hệ thống điều hướng về Trang Danh Sách.
  
-  *Công cụ tìm kiếm*
+  **Công cụ tìm kiếm**
 Đường dẫn (URL):
 ```
 GET /students?keyword={name}
