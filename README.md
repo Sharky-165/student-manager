@@ -85,7 +85,7 @@ Hiện tượng & Nguyên nhân: Dữ liệu bị xóa sạch sau mỗi lần kh
 Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-auto=update```. Ở chế độ này, Hibernate sẽ đối chiếu schema hiện tại với các Entity trong Java để chỉ cập nhật những thay đổi về cấu trúc mà không làm mất dữ liệu hiện có.
 
 ## 5. Screenshot và mô tả các module trong Lab 4
-**Giao diện xem toàn bộ sinh viên**<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/fd35a68b-5169-4784-a28a-07bacf55a920" />
+**Giao diện xem toàn bộ sinh viên** <img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/fd35a68b-5169-4784-a28a-07bacf55a920" />
 
 Đường dẫn (URL):
 ```
