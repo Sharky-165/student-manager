@@ -41,7 +41,7 @@
     <!-- Cu phap Thymeleaf: Duyet qua danh sach "dsSinhVien" -->
     <!-- th:each="bien_tam : ${key_trong_model}" -->
     <tr th:each="student : ${list_students}"
-        th:class="${student.age < 30} ? 'text-danger':''"
+        th:class="${student.age < 18} ? 'text-danger':''"
         th:onclick="'window.location.href=\'/students/' + ${student.id} + '\''">
 
         <td th:text="${student.id}">ID Mau</td>
