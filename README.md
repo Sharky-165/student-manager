@@ -109,6 +109,19 @@ Giải pháp: Chuyển đổi cấu hình sang ```bash spring.jpa.hibernate.ddl-
   - Email
   - Tuổi
 
+**Giao diện xem thông tin sinh viên** <img width="1915" height="962" alt="image" src="https://github.com/user-attachments/assets/af9a0ebe-637c-4eed-9857-c77a53e09d2c" />
+
+Đường dẫn (URL):
+```
+/students/{id}
+```
+
+- Hiển thị dữ liệu bao gồm các trường:
+  - ID
+  - Họ và Tên
+  - Email
+  - Tuổi
+
 **Giao diện chỉnh sửa sinh viên, xóa sinh viên** <img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/dc798ca2-bac3-4dff-b995-7de9203bead3" />
 Đường dẫn (URL):
 ```
